@@ -16,6 +16,32 @@ Dataset loader was used to load image in batches of defined size .
 We tried with custom data loader but finally added the data loader provided by pytorch 
 How the Input data were combined
 
+How data sets are combined
+============================
+MNIST Data Processing
+
+i) Conv1 - 3 x 3 kernel - Target Image size - 26 x 26
+
+ii) Conv2 - 3 x 3 kernel - Target Image Size - 24 x 24
+
+iii) Maxpool2D - Stride -2 - Target Image size - 12 x 12
+
+iv ) Conv 3 - 5 x 5 kernel - Target Image Size - 8 x 8
+
+v) Maxpool2D stride2 - Target Image size 4 x 4
+
+vi) Fully Connected layer FC1, FC2
+
+vii) Output Layer
+
+Random Data + MNIST
+
+i) Concatenate the Random Number after FC2 Layer - Now the Targets are 20
+
+ii) Pass the data through FC3 Layer
+
+iii) Output layer
+
 Evaluation of the result 
 ==============================
 1.	Evaluation of the result by Loss 
@@ -43,4 +69,5 @@ Loss Function
 We used Cross Entropy Loss function which is also known as Log loss. The Loss function is very simple which calculates the probability of each class and compares it with the actual one. Then based on the difference it penalizes the data based on how far it’s from the expected value.
 This loss function is simple and fast. Knowing that MNIST dataset is simple in nature we choose to go with this. We can choose more complex loss functions for complex datasets.
  
+ ![](./images/cp.png)
 

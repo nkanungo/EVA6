@@ -69,5 +69,5 @@ Loss Function
 We used Cross Entropy Loss function which is also known as Log loss. The Loss function is very simple which calculates the probability of each class and compares it with the actual one. Then based on the difference it penalizes the data based on how far it’s from the expected value.
 This loss function is simple and fast. Knowing that MNIST dataset is simple in nature we choose to go with this. We can choose more complex loss functions for complex datasets.
  
- ![](./images/cp.png)
+ ![](./images/ce.png)
 

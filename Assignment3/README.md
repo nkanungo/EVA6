@@ -70,4 +70,8 @@ We used Cross Entropy Loss function which is also known as Log loss. The Loss fu
 This loss function is simple and fast. Knowing that MNIST dataset is simple in nature we choose to go with this. We can choose more complex loss functions for complex datasets.
  
  ![](./images/ce.png)
+ 
+ Running Log
+ =============
+ ![](./images/log.jpg)
 

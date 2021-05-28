@@ -129,4 +129,6 @@ Loss Curve comparison based on learning rate
 That’s it, we could successfully train a neural network from scratch.  It was exciting but at the same time we saw how time consuming and error prone this whole process was. The complexity rises exponentially when we increase the number of inputs and layers. 
 
 I am sure here we can say it’s practically impossible for someone to perform this manually and find the best performing model. 
-So let’s appreciate the great work the inventors have done to save our time and effort. Kudos .
+So let’s appreciate the great work the inventors have done to save our time and effort. 
+
+Kudos .

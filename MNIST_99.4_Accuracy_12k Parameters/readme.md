@@ -48,7 +48,7 @@ Constraints
 
 What to achieve 
 ================
-   -  >= 99.4% accuracy with less than 20 epochs 
+   -  '>=' 99.4% accuracy with less than 20 epochs 
 
 What’s the right approach
 ===========================

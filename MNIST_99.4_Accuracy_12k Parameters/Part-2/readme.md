@@ -62,7 +62,7 @@ Special Considerations
 
 3. As less parameter as possible (near to the lower limit of 12000)
 4. Dropout of 0.069 - As asked
-5. Rotation of -5% - 5 %
+5. Rotation of -5% to 5 %
 6. Normalization
 7. Batch size of 128 
 

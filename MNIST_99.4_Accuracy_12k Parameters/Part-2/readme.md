@@ -16,7 +16,7 @@ Input
 ======
 MNIST data which is nothing but the images of handwritten digits 
 
-![]('images/mnist.png')
+![](images/mnist.png)
 
 Constraints
 ===========
@@ -91,17 +91,17 @@ Used Even size kernel and avg2d
 In this network we used only Maxpooling layer with an intention to keep Maxpool as far as possible to the last layer. We also used avg2d instead of adaptive one.
 The model trained and validation accuracy reached 99.4 % multiple times but the training curve was not smooth.
 
-![]('images/parameter.png')
+![](images/parameter.png)
 
 - Did we Try networks without Batch Normalization, Dropout and higher value of dropout? Yes, we did. The accuracy was also > 99.4 %. But again, the curve was not smooth 
 
 Again, surprisingly when I updated the same model with 1 x1 kernel and adaptive pooling with GAP at 5x5 image size the model could not achieve 99.4 % accuracy. Stuck at 99.37 % - 99.38 %. Initially I thought it might be for random initialization but after running it multiple times I found that’s not the case
 
-![]('images/t1.png')
+![](images/t1.png)
 
 Now this network which is the final one gave accuracy multiple times between 1-20 epoch. The curve is also smooth.
 
-![]('images/final.png')
+![](images/final.png)
 
 
 
@@ -112,5 +112,5 @@ We also modified the network to apply Batch Normalization before Relu. The netwo
 A side-by-side comparison to keep in mind 
 ==========================================
  
-![]('images/comparison.png')
+![](images/comparison.png)
 

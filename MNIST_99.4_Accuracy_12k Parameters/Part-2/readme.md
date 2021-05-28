@@ -104,6 +104,105 @@ Now this network which is the final one gave accuracy multiple times between 1-2
 ![](images/final.png)
 
 
+Log
+======
+0%|          | 0/469 [00:00<?, ?it/s]Currently Executing Epoch: 1
+/usr/local/lib/python3.7/dist-packages/ipykernel_launcher.py:67: UserWarning: Implicit dimension choice for log_softmax has been deprecated. Change the call to include dim=X as an argument.
+Loss=0.06623551994562149 Batch_id=468 Accuracy=86.28: 100%|██████████| 469/469 [00:20<00:00, 23.26it/s]
+/usr/local/lib/python3.7/dist-packages/torch/optim/lr_scheduler.py:134: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0542, Accuracy: 9828/10000 (98.28%)
+
+Currently Executing Epoch: 2
+Loss=0.07634750753641129 Batch_id=468 Accuracy=97.29: 100%|██████████| 469/469 [00:20<00:00, 23.16it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0340, Accuracy: 9883/10000 (98.83%)
+
+Currently Executing Epoch: 3
+Loss=0.03574162349104881 Batch_id=468 Accuracy=98.00: 100%|██████████| 469/469 [00:20<00:00, 22.96it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0308, Accuracy: 9896/10000 (98.96%)
+
+Currently Executing Epoch: 4
+Loss=0.021819936111569405 Batch_id=468 Accuracy=98.28: 100%|██████████| 469/469 [00:20<00:00, 23.15it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0274, Accuracy: 9911/10000 (99.11%)
+
+Currently Executing Epoch: 5
+Loss=0.04234654828906059 Batch_id=468 Accuracy=98.36: 100%|██████████| 469/469 [00:20<00:00, 23.09it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0248, Accuracy: 9914/10000 (99.14%)
+
+Currently Executing Epoch: 6
+Loss=0.052025169134140015 Batch_id=468 Accuracy=98.48: 100%|██████████| 469/469 [00:20<00:00, 22.97it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0213, Accuracy: 9916/10000 (99.16%)
+
+Currently Executing Epoch: 7
+Loss=0.009478755295276642 Batch_id=468 Accuracy=98.63: 100%|██████████| 469/469 [00:20<00:00, 23.06it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0224, Accuracy: 9921/10000 (99.21%)
+
+Currently Executing Epoch: 8
+Loss=0.05772705376148224 Batch_id=468 Accuracy=98.69: 100%|██████████| 469/469 [00:20<00:00, 22.99it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0198, Accuracy: 9929/10000 (99.29%)
+
+Currently Executing Epoch: 9
+Loss=0.01770886965095997 Batch_id=468 Accuracy=98.73: 100%|██████████| 469/469 [00:20<00:00, 23.10it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0173, Accuracy: 9944/10000 (99.44%)
+
+Currently Executing Epoch: 10
+Loss=0.058960724622011185 Batch_id=468 Accuracy=98.85: 100%|██████████| 469/469 [00:20<00:00, 22.97it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0216, Accuracy: 9929/10000 (99.29%)
+
+Currently Executing Epoch: 11
+Loss=0.06814174354076385 Batch_id=468 Accuracy=98.93: 100%|██████████| 469/469 [00:20<00:00, 22.94it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0181, Accuracy: 9942/10000 (99.42%)
+
+Currently Executing Epoch: 12
+Loss=0.08384868502616882 Batch_id=468 Accuracy=98.95: 100%|██████████| 469/469 [00:20<00:00, 23.17it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0191, Accuracy: 9943/10000 (99.43%)
+
+Currently Executing Epoch: 13
+Loss=0.035104893147945404 Batch_id=468 Accuracy=98.94: 100%|██████████| 469/469 [00:20<00:00, 22.93it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0193, Accuracy: 9931/10000 (99.31%)
+
+Currently Executing Epoch: 14
+Loss=0.006110087502747774 Batch_id=468 Accuracy=99.00: 100%|██████████| 469/469 [00:20<00:00, 23.06it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0189, Accuracy: 9935/10000 (99.35%)
+
+Currently Executing Epoch: 15
+Loss=0.005162848625332117 Batch_id=468 Accuracy=99.07: 100%|██████████| 469/469 [00:20<00:00, 22.92it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0173, Accuracy: 9936/10000 (99.36%)
+
+Currently Executing Epoch: 16
+Loss=0.007750762160867453 Batch_id=468 Accuracy=99.06: 100%|██████████| 469/469 [00:20<00:00, 22.97it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0181, Accuracy: 9942/10000 (99.42%)
+
+Currently Executing Epoch: 17
+Loss=0.060273587703704834 Batch_id=468 Accuracy=99.07: 100%|██████████| 469/469 [00:20<00:00, 23.18it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0178, Accuracy: 9942/10000 (99.42%)
+
+Currently Executing Epoch: 18
+Loss=0.019279396161437035 Batch_id=468 Accuracy=99.11: 100%|██████████| 469/469 [00:20<00:00, 22.97it/s]
+  0%|          | 0/469 [00:00<?, ?it/s]
+Test set: Average loss: 0.0175, Accuracy: 9941/10000 (99.41%)
+
+Currently Executing Epoch: 19
+Loss=0.011843018233776093 Batch_id=468 Accuracy=99.11: 100%|██████████| 469/469 [00:20<00:00, 22.93it/s]
+
+Test set: Average loss: 0.0166, Accuracy: 9939/10000 (99.39%)
 
 Takeaway
 ==============

@@ -101,7 +101,6 @@ Again, surprisingly when I updated the same model with 1 x1 kernel and adaptive 
 
 Now this network which is the final one gave accuracy multiple times between 1-20 epoch. The curve is also smooth.
 
-![](images/final.png)
 
 
 Log
@@ -203,6 +202,12 @@ Currently Executing Epoch: 19
 Loss=0.011843018233776093 Batch_id=468 Accuracy=99.11: 100%|██████████| 469/469 [00:20<00:00, 22.93it/s]
 
 Test set: Average loss: 0.0166, Accuracy: 9939/10000 (99.39%)
+
+
+
+![](images/final.png)
+
+
 
 Takeaway
 ==============

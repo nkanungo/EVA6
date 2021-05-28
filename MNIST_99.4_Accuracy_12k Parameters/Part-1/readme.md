@@ -43,6 +43,7 @@ We have considered Mean Square Error (MSE) loss.
 
 Back Propagation Steps 
 ==========================
+
 The first step while performing back propagation is to take the partial derivative w.r.t the weights near to the output layer (W5, W6, W7, W8)
 
 - ӘE/Әw5 = (ӘE1+ӘE2)/Әw5 = ӘE1/Әw5= (ӘE1/Әout_o1 ) * (Әout_o1/Әo1)*(Әo1/Әw5) 
@@ -84,6 +85,7 @@ Based on chain rule ;
 
 ӘE/Әw1 = [(ӘE1/Әout_o1) *  (Әout_o1/Әo1) *  (Әo1/Әout_h1) *  (Әout_h1/Әh1)*  (Әh1/Әw1)]+ [(ӘE2/Әout_o2) *  (Әout_o2/Әo2) *  (Әo2/Әout_h1) *  (Әout_h1/Әh1)*  (Әh1/Әw1)]
 
+
 1.	(ӘE1/Әout_o1 ) = Ә(1/2 *(t1 - out_o1) **2)/Әout_o1  = (out_o1 - t1)
 2.	(Әout_o1/Әo1) = Ә(σ(o1) )/Әo1 =  σ(o1)/1+σ(-o1) = out_o1 * (1-out_o1)
 3.	(Әo1/Әout_h1) = Ә(w5*out_h1 + w6 * out_h2)/Әout_h1 = w5
@@ -97,6 +99,7 @@ Based on chain rule ;
 
 
 Putting it altogether we got 
+
 ӘE/Әw1 =  [(out_o1 - t1) * out_o1 * (1-out_o1) * w5 + (out_o2 - t2) * out_o2 * (1-out_o2) * w7] * out_h1 * (1-out_h1) * i1
 
 Similarly ;

@@ -48,6 +48,8 @@ Constraints
 
 What to achieve 
 ================
->= 99.4% accuracy with less than 20 epochs 
+   -  >= 99.4% accuracy with less than 20 epochs 
+
 What’s the right approach
+===========================
 The Training must be smooth and the validation accuracy should be 99.4 % over multiple epochs. If we plot the graph then it must be a smooth graph  

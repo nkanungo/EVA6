@@ -57,7 +57,7 @@ Step4 of architecture changes:
 In this step I will change the architecture from step3 by introducing Image augmentation of random rotation between -7 to +7 degrees. My expectation is that validation accuracy should increase
 
 ## Result: 
-I have got Train accuracy: 98.52 validation accuracy: 99.35 99.22 Number of parameters: 8,442
+I have got Train accuracy: 98.52 validation accuracy: 99.35  Number of parameters: 8,442
 
 ## Analysis: 
 As expected validation accuracy increased to 99.35 from the step3 model, which has valicdation accuracy 99.22. I also observe that validation accuracy 99.35 is much higher than training accuracy 98.52. These are because with image augmentation, as CNN could learn from more images. Still after this step, I am behind the target of 99.40 
@@ -89,7 +89,7 @@ mentioned in the assignment
 Step7 of architecture changes:
 ================================
 ## Target: 
-We saw in the last run that the validation accuracy is around 99.4 towards the last couple of epochs. But on 13th & 14th Epoch it slipped to 99.38. MNIST is a easy dataset, so can we learn faster to achieve this accuracy in lesser number of epochs and with more consistency? Let's check it out
+I saw in the last run that the validation accuracy is around 99.4 towards the last couple of epochs. But on 13th & 14th Epoch it slipped to 99.38. MNIST is a easy dataset, so can I learn faster to achieve this accuracy in lesser number of epochs and with more consistency? Let's check it out
 
 ## Result: 
 I have got Train accuracy: 98.87 validation accuracy: 99.44 Number of parameters: 8,582
@@ -100,13 +100,13 @@ In this step, I could see the validation accuracy improved to 99.44 which is mor
 Step8 of architecture changes:
 ===================================
 ## Target: 
-We saw in the last run that the validation accuracy is around 99.44 and very stable as the last 5 epochs were above 99.4. Target Achieved. Then what's this. This one is to enhance the network further and see if we can achieve the accuracy with less than 8000 parameters. But wait, this was supposed to be done in Step-2. Yes right, but first we wanted to achieve the target of 99.4 with less than 10k steps. Once achieved we need to enhance it further if we can. So, let's try
+Can I enhance the network further to achieve the same accuracy in less than 8000 parameters? Let's check that out 
 
 ## Result: 
 I have got Train accuracy: 98.73 validation accuracy: 99.43 Number of parameters: 7,836
 
 ## Analysis: 
-We changed the number of kernels slightly for the first couple of layers. We know at this layer it extracts edges and gradients and with MNIST we could extract those with lesser feature extractors. Hence with a smaller number of parameters we achieved the required accuracy
+I changed the number of kernels slightly for the first couple of layers. I know at this layer it extracts edges and gradients and with MNIST I could extract those with lesser feature extractors. Hence with a smaller number of parameters I achieved the required accuracy
 
 Accuracy for Step-7 & Step-8
 ================================
@@ -114,5 +114,5 @@ Accuracy for Step-7 & Step-8
 
 Nest Steps
 ============
-Let’s see if we can improve the accuracy further or reduce the parameters further to achieve the same result 
+Let’s see if I can improve the accuracy further or reduce the parameters further to achieve the same result 
 

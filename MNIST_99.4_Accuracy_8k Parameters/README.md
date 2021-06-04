@@ -19,35 +19,48 @@ This repository is for the DNN arhitecture change steps on MNIST dataset to achi
 
 Step1 of architecture changes:
 ====================================
-##Target: In this step I have choosen vanilla architecture of 6 convolution layer and 2 transtion blocks (maxpool) and used GAP in the the last layer. My target is if I can achieve around 99 validation accuracy then i can refine the mode further in later steps. I will run it for 20 epochs which is more than 15) just to study how the accuracy changes in vanila architecture
+## Target: 
 
-##Result: I have got Train accuracy: 99.62 validation accuracy:99.09 Number of parameters: 40,202
+In this step I have choosen vanilla architecture of 6 convolution layer and 2 transtion blocks (maxpool) and used GAP in the the last layer. My target is if I can achieve around 99 validation accuracy then i can refine the mode further in later steps. I will run it for 20 epochs which is more than 15) just to study how the accuracy changes in vanila architecture
 
-##Analysis: I could see that validation accuracy is steadily increasing over epochs, and finally got vlidation accuracy of 99.09 which is a good architecture to explore further. Also noticed that train accuracy 99.62 is much higher than validation accuracy 99.09, so model could be overfitting. But as number of parameters is 40,202 which is around 4 times the target parameters, I will try to reduce the parameters in next step
+## Result: 
+I have got Train accuracy: 99.62 validation accuracy:99.09 Number of parameters: 40,202
+
+## Analysis: 
+I could see that validation accuracy is steadily increasing over epochs, and finally got vlidation accuracy of 99.09 which is a good architecture to explore further. Also noticed that train accuracy 99.62 is much higher than validation accuracy 99.09, so model could be overfitting. But as number of parameters is 40,202 which is around 4 times the target parameters, I will try to reduce the parameters in next step
 
 Step2 of architecture changes:
 =================================
-Target: In this step I will try to change the vanilla architecture by changing number of parameters within 10,000 . I will reduce number of kernels also remove all the bias parameters by setting bias value to False. I will run for 15 epochs. My expectation is that it may slightly reduce from the validation accuracy achieved in vanilla architecture
+## Target: 
+In this step I will try to change the vanilla architecture by changing number of parameters within 10,000 . I will reduce number of kernels also remove all the bias parameters by setting bias value to False. I will run for 15 epochs. My expectation is that it may slightly reduce from the validation accuracy achieved in vanilla architecture
 
+##
 Result: I have got Train accuracy:98.99 validation accuracy:98.92 Number of parameters: 8,442
 
-Analysis: As expected validation accuracy has slightly reduced to 98.92 from the vanilla architecure with accuracy 99.09. This could be becuase I reduced number of kernels. But unlike vanilla architecture, the difference between Train Accuray and Validation accuracy is very less, which means it is not overfitting. Also, number of parameters 8442 is well within my target of 10K parameters
+## Analysis: 
+As expected validation accuracy has slightly reduced to 98.92 from the vanilla architecure with accuracy 99.09. This could be becuase I reduced number of kernels. But unlike vanilla architecture, the difference between Train Accuray and Validation accuracy is very less, which means it is not overfitting. Also, number of parameters 8442 is well within my target of 10K parameters
 
 Step3 of architecture changes:
 ==================================
-Target: In this step I will change the architecture from step2 by introducing Batchnormalization and Dropout. Expectation is that validation accuracy should increase
+## Target: 
+In this step I will change the architecture from step2 by introducing Batchnormalization and Dropout. Expectation is that validation accuracy should increase
 
-Result: I have got Train accuracy: 98.73 validation accuracy: 99.22 Number of parameters: 8,442
+## Result: 
+I have got Train accuracy: 98.73 validation accuracy: 99.22 Number of parameters: 8,442
 
-Analysis: As expected validation accuracy increased to 99.22 from the step2 model, which has accuracy 98.92. I also observe that validation accuracy 99.22 is much higher than training accuracy 98.73. These could be because of regularization effect of batch normalization and droupout introudced in this step
+## Analysis: 
+As expected validation accuracy increased to 99.22 from the step2 model, which has accuracy 98.92. I also observe that validation accuracy 99.22 is much higher than training accuracy 98.73. These could be because of regularization effect of batch normalization and droupout introudced in this step
 
 Step4 of architecture changes:
 =================================
-Target: In this step I will change the architecture from step3 by introducing Image augmentation of random rotation between -7 to +7 degrees. My expectation is that validation accuracy should increase
+## Target: 
+In this step I will change the architecture from step3 by introducing Image augmentation of random rotation between -7 to +7 degrees. My expectation is that validation accuracy should increase
 
-Result: I have got Train accuracy: 98.52 validation accuracy: 99.35 99.22 Number of parameters: 8,442
+## Result: 
+I have got Train accuracy: 98.52 validation accuracy: 99.35 99.22 Number of parameters: 8,442
 
-Analysis: As expected validation accuracy increased to 99.35 from the step3 model, which has valicdation accuracy 99.22. I also observe that validation accuracy 99.35 is much higher than training accuracy 98.52. These are because with image augmentation, as CNN could learn from more images. Still after this step, I am behind the target of 99.40 
+## Analysis: 
+As expected validation accuracy increased to 99.35 from the step3 model, which has valicdation accuracy 99.22. I also observe that validation accuracy 99.35 is much higher than training accuracy 98.52. These are because with image augmentation, as CNN could learn from more images. Still after this step, I am behind the target of 99.40 
 validation accuracy
 
 Step5 of architecture changes:

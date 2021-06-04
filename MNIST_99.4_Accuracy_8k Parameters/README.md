@@ -19,11 +19,11 @@ This repository is for the DNN arhitecture change steps on MNIST dataset to achi
 
 Step1 of architecture changes:
 ====================================
-Target: In this step I have choosen vanilla architecture of 6 convolution layer and 2 transtion blocks (maxpool) and used GAP in the the last layer. My target is if I can achieve around 99 validation accuracy then i can refine the mode further in later steps. I will run it for 20 epochs which is more than 15) just to study how the accuracy changes in vanila architecture
+##Target: In this step I have choosen vanilla architecture of 6 convolution layer and 2 transtion blocks (maxpool) and used GAP in the the last layer. My target is if I can achieve around 99 validation accuracy then i can refine the mode further in later steps. I will run it for 20 epochs which is more than 15) just to study how the accuracy changes in vanila architecture
 
-Result: I have got Train accuracy: 99.62 validation accuracy:99.09 Number of parameters: 40,202
+##Result: I have got Train accuracy: 99.62 validation accuracy:99.09 Number of parameters: 40,202
 
-Analysis: I could see that validation accuracy is steadily increasing over epochs, and finally got vlidation accuracy of 99.09 which is a good architecture to explore further. Also noticed that train accuracy 99.62 is much higher than validation accuracy 99.09, so model could be overfitting. But as number of parameters is 40,202 which is around 4 times the target parameters, I will try to reduce the parameters in next step
+##Analysis: I could see that validation accuracy is steadily increasing over epochs, and finally got vlidation accuracy of 99.09 which is a good architecture to explore further. Also noticed that train accuracy 99.62 is much higher than validation accuracy 99.09, so model could be overfitting. But as number of parameters is 40,202 which is around 4 times the target parameters, I will try to reduce the parameters in next step
 
 Step2 of architecture changes:
 =================================

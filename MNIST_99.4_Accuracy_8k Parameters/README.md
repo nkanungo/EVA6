@@ -1,8 +1,9 @@
 Assignment 5 – EVA 6
 ========================
 •	Developers
-o	Monimoy Purkayastha (monimoyd@gmail.com)
-o	Nihar Kanungo (nihar.kanungo@gmail.com)
+
+- Monimoy Purkayastha (monimoyd@gmail.com)
+- Nihar Kanungo (nihar.kanungo@gmail.com)
 
 Requirement
 ==============

@@ -72,7 +72,7 @@ The group normalization and L1 regularization didn't do a good job on model accu
 - However the validation accuracy is above train accuracy ( That's good news, which means this network has potential to improve further) 
 - Let's observe the misclassified images and see where things went wrong 
 
-![](images/gn.png)
+![](images/gn.PNG)
 
 ## Layer Normalization + L2
 ============================
@@ -88,7 +88,7 @@ The Layer normalization and L2 regularization improved the accuracy to 99.19%. S
 
 I think to understand this we need to take step by step approach. I think at this time we will keep out assumptions 
 
-![](images/ln.png)
+![](images/ln.PNG)
 
 ## Batch Normalization L1 + L2
 =======================================
@@ -100,7 +100,7 @@ The Batch normalization and L1/L2 regularization improved the accuracy to 99.11%
 
 Let's see the images and observe the differences if we can 
 
-![](images/bn.png)
+![](images/bn.PNG)
 
 Train Loss Observation
 =========================

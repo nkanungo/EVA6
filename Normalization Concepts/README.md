@@ -139,3 +139,10 @@ Test Accuracy Observation
  - However as discussed before the reason could be the increase in number of parameters
  - Here with this study, we will not infer anything rather wait for the next phase of study
 
+
+
+**Manual Calculation Screenshot**
+
+![]('images/norm.png)
+
+The detail excel sheet attached.

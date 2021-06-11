@@ -19,12 +19,12 @@ How this change affects the Program
 We have defined the network here . Usually we code Batch normalization directly in the network . However due to this generalization , the code will call function after performing the convolution operation . Based on the type passed by the user this function will return the code to perform the specific normalization. 
 
 '''
-def perform_norm(type, num_channels, channel_size_w, channel_size_h, num_groups=1):
+def perform_norm(type, num_channels, channel_size_w, channel_size_h, num_groups=2):
     if type == 'BN':
         return nn.BatchNorm2d(num_channels)
     elif type == 'LN':
         return nn.LayerNorm((num_channels, channel_size_w, channel_size_h))
-    else:
+    elif type == 'GN':
         return nn.GroupNorm(num_groups, num_channels)
 
 

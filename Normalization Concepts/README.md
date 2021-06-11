@@ -143,6 +143,6 @@ Test Accuracy Observation
 
 **Manual Calculation Screenshot**
 
-![]('images/norm.png)
+![](images/norm.png)
 
 The detail excel sheet attached.

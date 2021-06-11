@@ -34,7 +34,7 @@ type: The user is expected to pass one of the three values
 
      - LN : If user pass this then the program must perform Layer Normalization
 
-     - If none of the above is passed then the program must perform Group Normalization
+     - GN : If user pass this then the program must perform Group Normalization
 
 How this change affects the Program
 -------------------------------------

@@ -142,7 +142,10 @@ Test Accuracy Observation
 
 
 **Manual Calculation Screenshot**
+=================================
+
 
 ![](images/norm.PNG)
 
-The detail excel sheet attached.
+
+Please Note : The detail excel sheet attached.

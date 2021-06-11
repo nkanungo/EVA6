@@ -2,7 +2,9 @@
 Assignment 6 – EVA 6
 =====================
 • Developers
+
    • 	Monimoy Purkayastha (monimoyd@gmail.com)
+   
    •	  Nihar Kanungo (nihar.kanungo@gmail.com)
 
 Requirement

@@ -68,7 +68,7 @@ In Any deep network the user must understand where things went wrong for improvi
 The group normalization should not add much parameters to the network, hence should not be computationally expensive than the vanilla 
 **Observation**
 The group normalization and L1 regularization didn't do a good job on model accuracy.
-- The model validation accuracy droped down to 98.26%.
+- The model validation accuracy droped down to 98.67%.
 - However the validation accuracy is above train accuracy ( That's good news, which means this network has potential to improve further) 
 - Let's observe the misclassified images and see where things went wrong 
 
@@ -81,7 +81,7 @@ The group normalization and L1 regularization didn't do a good job on model accu
 - The Layer normalization should add more parameters to the network, hence it should  be computationally expensive than the vanilla . Let's observe 
 
 **Observation**
-The Layer normalization and L2 regularization improved the accuracy to 99.19%. So, what can we infer from this? 
+The Layer normalization and L2 regularization improved the accuracy to 99.25%. So, what can we infer from this? 
 - Did layer normalization improve the accuracy?
 - Or it was L2 regularization who was the differentiator
 - Or the model worked better as it has a greater number of parameters 
@@ -93,7 +93,7 @@ I think to understand this we need to take step by step approach. I think at thi
 ## Batch Normalization L1 + L2
 =======================================
 **Observation**
-The Batch normalization and L1/L2 regularization improved the accuracy to 99.11% with same number of parameters 
+The Batch normalization and L1/L2 regularization improved the accuracy to 99.15% with same number of parameters 
 
 - So possibly having both L1/L2 regularization improved the accuracy
 - Or the Batch normalization improved it 

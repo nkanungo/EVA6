@@ -71,7 +71,7 @@ I have got Train accuracy: 78-79% validation accuracy: 85.47% under 50 epochs
 
 This model has used a lot of parameters and could able to reach the accuracy over 85%. However, it’s computationally expensive. We need to reduce the number of parameters used in this model
 
-**Experiment-3 **
+**Experiment-3**
 
 **Model Structure**
 
@@ -85,7 +85,7 @@ I have got Train accuracy: 80-82% validation accuracy:84.96% under 100 epochs
 
 This model could not rich over 85% even after running for 100 epochs. We could have run the model for multiple times to achieve that due to randomization of the input weights but that’s not a consistent model. Hence, we need to improve further 
 
-**Experiment-4 **
+**Experiment-4**
 
 **Model Structure**
 

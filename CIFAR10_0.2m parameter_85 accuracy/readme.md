@@ -31,7 +31,7 @@ We performed many experiments on
 Following is few to consolidate 
 
 
-**Experiment-1 **
+**Experiment-1**
 
 **Model Structure**
 

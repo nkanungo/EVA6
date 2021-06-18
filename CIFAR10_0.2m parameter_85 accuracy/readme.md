@@ -112,3 +112,9 @@ We achieved over 85% accuracy finally. However, we can still improve the model p
 # Misclassified Images
 ![ ](images/misclassified.png)
 
+
+**Observation**
+
+By looking at the images we believe the model gets confused while predicting for images where it closely resembles another class. The possible reason could be that the augmentations has not created a generalized impact. With more data augmentation strategies the model may perform better in identifying the images properly
+
+

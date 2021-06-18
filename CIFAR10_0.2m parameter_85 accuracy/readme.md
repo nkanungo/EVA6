@@ -93,7 +93,7 @@ Made a change by including “ReduceLROnPlateau”
 
 **Result:**
 
-I have got Train accuracy: 79% validation accuracy:86.43% under 100 epochs 
+I have got Train accuracy: 79% validation accuracy: 85.63% under 100 epochs 
 
 **Analysis:**
 

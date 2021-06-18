@@ -77,5 +77,5 @@ We achieved over 85% accuracy finally. However, we can still improve the model p
 ![ ](images/loss_accuracy.PNG)
 
 # Misclassified Images
-![ ](images/misclassified.PNG)
+![ ](images/misclassified.png)
 

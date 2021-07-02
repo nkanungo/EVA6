@@ -43,4 +43,4 @@ Misclassified Images
 
 Gradcam Images
 =====================
-![](images/gradcam.png)
+![](images/gradcam.PNG)

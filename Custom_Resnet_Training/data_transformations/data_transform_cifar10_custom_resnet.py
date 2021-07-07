@@ -11,7 +11,7 @@ class album_Compose_train:
         self.transform = Compose(
         [
          PadIfNeeded(min_height=48, min_width=48, border_mode=cv2.BORDER_CONSTANT, value=[0.4914*255, 0.4822*255, 0.4465*255], p=1.0),
-         RandomCrop(32,32, p=1.0),
+         RandomCrop(32,32),
          Cutout(num_holes=1, max_h_size=8, max_w_size=8,  fill_value=[0.4914*255, 0.4822*255, 0.4465*255]),
          HorizontalFlip(p=0.2),
          #GaussNoise(p=0.15),

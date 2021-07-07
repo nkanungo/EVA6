@@ -35,17 +35,17 @@ def perform_training(epochs=40, lr=0.01, momentum=0.9,train_losses, test_losses,
 
 def incorrect_image(incorrect_image_list, predicted_label_list, correct_label_list):
         for (i, [data, target]) in enumerate(testloader):
-        data, target = data.to(device), target.to(device)
-        output = model(data)
-        pred = output.argmax(dim=1, keepdim=True).squeeze(1)         
-        idxs_mask = (pred !=  target).view(-1)
-        img_nm = data[idxs_mask].cpu().numpy()
-        img_nm = img_nm.reshape(img_nm.shape[0], 3, 32, 32)
-        if img_nm.shape[0] > 0:
-            img_list = [img_nm[i] for i in range(img_nm.shape[0])]
-            incorrect_image_list.extend(img_list)
-            predicted_label_list.extend(pred[idxs_mask].detach().cpu().numpy())
-            correct_label_list.extend(target[idxs_mask].detach().cpu().numpy())
+            data, target = data.to(device), target.to(device)
+            output = model(data)
+            pred = output.argmax(dim=1, keepdim=True).squeeze(1)         
+            idxs_mask = (pred !=  target).view(-1)
+            img_nm = data[idxs_mask].cpu().numpy()
+            img_nm = img_nm.reshape(img_nm.shape[0], 3, 32, 32)
+            if img_nm.shape[0] > 0:
+                img_list = [img_nm[i] for i in range(img_nm.shape[0])]
+                incorrect_image_list.extend(img_list)
+                predicted_label_list.extend(pred[idxs_mask].detach().cpu().numpy())
+                correct_label_list.extend(target[idxs_mask].detach().cpu().numpy())
         return incorrect_image_list, predicted_label_list, correct_label_list
         
 def lr_range_test(PATH_BASE_MODEL,model,EPOCHS_TO_TRY,max_lr_list, test_accuracy_list):

@@ -18,7 +18,7 @@ def get_model() :
     model =  CustomResNet().to(device)
     return model
 
-def perform_training(epochs=40, lr=0.01, momentum=0.9,train_losses, test_losses,train_acc,test_acc):
+def perform_training(train_losses, test_losses,train_acc,test_acc,epochs=40, lr=0.01, momentum=0.9):
     model =  ResNet18().to(device)
     #optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9, weight_decay=0.0001)
     optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum)

@@ -1,9 +1,9 @@
 from PIL import Image
 import cv2
 import numpy as np
-from albumentations import Compose, RandomCrop, Normalize, HorizontalFlip, Resize,GaussNoise
-from albumentations.augmentations.transforms import Cutout,PadIfNeeded,RandomCrop
-from albumentations.pytorch import ToTensor
+from albumentations import Compose, Normalize, HorizontalFlip, Resize,GaussNoise
+from albumentations.augmentations.transforms import Cutout,PadIfNeeded
+from albumentations.pytorch import ToTensorV2
 
 
 class album_Compose_train:

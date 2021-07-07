@@ -4,7 +4,7 @@ import numpy as np
 from albumentations import Compose, Normalize, HorizontalFlip, Resize,GaussNoise
 from albumentations.augmentations.transforms import Cutout,PadIfNeeded
 from albumentations.pytorch import ToTensorV2
-
+from torchvision.transforms import RandomCrop
 
 class album_Compose_train:
     def __init__(self):

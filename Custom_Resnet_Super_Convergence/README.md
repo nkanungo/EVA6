@@ -147,7 +147,7 @@ Test set: Average loss: 0.3211, Accuracy: 9047/10000 (90.47%)
 Visualization
 --------------
 
-![](images/accuracy.png)
+![](images/accuracy_curve.png)
 
 ![](images/misclassified.png)
 

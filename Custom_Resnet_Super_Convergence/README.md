@@ -147,12 +147,12 @@ Test set: Average loss: 0.3211, Accuracy: 9047/10000 (90.47%)
 Visualization
 --------------
 
-![](images/accuracy.PNG)
+![](images/accuracy.png)
 
-![](images/misclassified.PNG)
+![](images/misclassified.png)
 
-![](images/gradcam.PNG)
-![](images/gradcam1.PNG)
-![](images/gradcam2.PNG)
+![](images/gradcam.png)
+![](images/gradcam1.png)
+![](images/gradcam2.png)
 
 

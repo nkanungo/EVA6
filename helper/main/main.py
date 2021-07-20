@@ -31,7 +31,7 @@ def imshow(img):
     plt.imshow(np.transpose(npimg, (1, 2, 0)))
 
 def model_summary():
-    !pip install torchsummary
+    #!pip install torchsummary
     from torchsummary import summary
     from models.resnet18 import ResNet18
     
@@ -66,7 +66,7 @@ def load_transfer(base_dir,batch_size,transform_type):
     
 
 def define_network():
-    !pip install torchsummary
+    #!pip install torchsummary
     from torchsummary import summary
     use_cuda = torch.cuda.is_available()
     device = torch.device("cuda" if use_cuda else "cpu")
@@ -75,7 +75,7 @@ def define_network():
     
 def lr_finder_exp(lr=0.001,momentum=0.9, weight_decay=0.0001,end_lr=10, num_iter=100):
     from tqdm import tqdm
-    !pip install torch-lr-finder
+    #!pip install torch-lr-finder
     import torch.optim as optim
     from torch_lr_finder import LRFinder
 

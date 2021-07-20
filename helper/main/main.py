@@ -19,7 +19,11 @@ import torch.utils.data as data
 import matplotlib.pyplot as plt
 from torchsummary import summary
 import matplotlib.pyplot as plt
-
+import torch.optim as optim
+from tqdm import tqdm
+#!pip install torch-lr-finder
+import torch.optim as optim
+from torch_lr_finder import LRFinder
 
 
 
@@ -73,10 +77,7 @@ def define_network():
     summary(model, input_size=(3, 64, 64))
     
 def lr_finder_exp(lr=0.001,momentum=0.9, weight_decay=0.0001,end_lr=10, num_iter=100,trainloader = None):
-    from tqdm import tqdm
-    #!pip install torch-lr-finder
-    import torch.optim as optim
-    from torch_lr_finder import LRFinder
+    
     use_cuda = torch.cuda.is_available()
     device = torch.device("cuda" if use_cuda else "cpu")
     model =  ResNet18(num_classes=200).to(device)

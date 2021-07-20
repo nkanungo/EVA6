@@ -34,13 +34,12 @@ def model_summary():
     #!pip install torchsummary
     from torchsummary import summary
     from models.resnet18 import ResNet18
-    
     use_cuda = torch.cuda.is_available()
     device = torch.device("cuda" if use_cuda else "cpu")
     model =  ResNet18(num_classes=200).to(device)
     summary(model, input_size=(3, 64, 64))
     
-def train_valid_split(base_dir,valid_split ):
+def train_valid_split(base_dir,valid_split):
     perform_train_validation_split(	base_dir= base_dir, validation_split = valid_split)
     
 def load_transfer(base_dir,batch_size,transform_type):
@@ -78,7 +77,8 @@ def lr_finder_exp(lr=0.001,momentum=0.9, weight_decay=0.0001,end_lr=10, num_iter
     #!pip install torch-lr-finder
     import torch.optim as optim
     from torch_lr_finder import LRFinder
-
+    use_cuda = torch.cuda.is_available()
+    device = torch.device("cuda" if use_cuda else "cpu")
     model =  ResNet18(num_classes=200).to(device)
     optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum, weight_decay=weight_decay)
     criterion = nn.CrossEntropyLoss()
@@ -89,6 +89,8 @@ def lr_finder_exp(lr=0.001,momentum=0.9, weight_decay=0.0001,end_lr=10, num_iter
     lr_finder.reset() # to reset the model and optimizer to their initial state
     
 def lr_finder_linear(lr=0.01,momentum=0.9, weight_decay=0.0001,end_lr=0.1, num_iter=100):
+    use_cuda = torch.cuda.is_available()
+    device = torch.device("cuda" if use_cuda else "cpu")
     model =  ResNet18(num_classes=200).to(device)
     optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum, weight_decay=weight_decay)
     lr_finder = LRFinder(model, optimizer, criterion, device="cuda")

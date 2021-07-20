@@ -88,6 +88,7 @@ def lr_finder_exp(lr=0.001,momentum=0.9, weight_decay=0.0001,end_lr=10, num_iter
     lr_finder.range_test(trainloader, end_lr=end_lr, num_iter=num_iter)
     lr_finder.plot() # to inspect the loss-learning rate graph
     lr_finder.reset() # to reset the model and optimizer to their initial state
+    return criterion
     
 def lr_finder_linear(lr=0.01,momentum=0.9, weight_decay=0.0001,end_lr=0.1, num_iter=100,trainloader = None,testloader = None,criterion = None):
     use_cuda = torch.cuda.is_available()

@@ -62,7 +62,7 @@ def load_transfer(base_dir,batch_size,transform_type):
     imshow(torchvision.utils.make_grid(images))
     # print labels
     print(' '.join('%5s' % classes[labels[j]] for j in range(4)))
-    
+    return trainloader, testloader, classes
 
 def define_network():
     #!pip install torchsummary
@@ -72,7 +72,7 @@ def define_network():
     model =  ResNet18(num_classes=200).to(device)
     summary(model, input_size=(3, 64, 64))
     
-def lr_finder_exp(lr=0.001,momentum=0.9, weight_decay=0.0001,end_lr=10, num_iter=100):
+def lr_finder_exp(lr=0.001,momentum=0.9, weight_decay=0.0001,end_lr=10, num_iter=100,trainloader = trainloader):
     from tqdm import tqdm
     #!pip install torch-lr-finder
     import torch.optim as optim
@@ -88,7 +88,7 @@ def lr_finder_exp(lr=0.001,momentum=0.9, weight_decay=0.0001,end_lr=10, num_iter
     lr_finder.plot() # to inspect the loss-learning rate graph
     lr_finder.reset() # to reset the model and optimizer to their initial state
     
-def lr_finder_linear(lr=0.01,momentum=0.9, weight_decay=0.0001,end_lr=0.1, num_iter=100):
+def lr_finder_linear(lr=0.01,momentum=0.9, weight_decay=0.0001,end_lr=0.1, num_iter=100,trainloader = trainloader,testloader = testloader):
     use_cuda = torch.cuda.is_available()
     device = torch.device("cuda" if use_cuda else "cpu")
     model =  ResNet18(num_classes=200).to(device)
@@ -98,7 +98,7 @@ def lr_finder_linear(lr=0.01,momentum=0.9, weight_decay=0.0001,end_lr=0.1, num_i
     lr_finder.plot(log_lr=False)
     lr_finder.reset()
     
-def train(lr=0.03, momentum=0.9, weight_decay=0.0001,EPOCHS = 50 ):
+def train_model(lr=0.03, momentum=0.9, weight_decay=0.0001,EPOCHS = 50,,trainloader = trainloader,testloader = testloader ):
     from tqdm import tqdm
     from torch.optim.lr_scheduler import ReduceLROnPlateau
     import torch.optim as optim
@@ -131,7 +131,7 @@ def train(lr=0.03, momentum=0.9, weight_decay=0.0001,EPOCHS = 50 ):
         
         scheduler.step(t_acc)
         
-def display_test_data():
+def display_test_data(testloader = testloader,classes=classes):
     dataiter = iter(testloader)
     images, labels = dataiter.next()
     # print images
@@ -139,7 +139,7 @@ def display_test_data():
     print('GroundTruth: ', ' '.join('%5s' % classes[labels[j]] for j in range(4)))
     
 
-def predict():
+def predict(classes=classes):
     with torch.no_grad():
         images, labels = images.to(device), labels.to(device)
         outputs = model(images) 
@@ -147,10 +147,10 @@ def predict():
 
     print('Predicted: ', ' '.join('%5s' % classes[predicted[j]]
                                     for j in range(4)))
-def print_test_accuracy():
+def print_test_accuracy(testloader = testloader):
     print('Accuracy of the network on the 10000 test images: %.2f %%' % (get_test_accuracy(model, testloader, device)))
     
-def accuracy_per_class():
+def accuracy_per_class(testloader = testloader,classes=classes):
     class_correct,class_total = get_accuracy_per_class(model, testloader, device, num_classes=len(classes))
     for i in range(len(classes)):
         if class_total[i] > 0.0:

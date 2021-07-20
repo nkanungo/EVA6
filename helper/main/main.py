@@ -89,7 +89,7 @@ def lr_finder_exp(lr=0.001,momentum=0.9, weight_decay=0.0001,end_lr=10, num_iter
     lr_finder.plot() # to inspect the loss-learning rate graph
     lr_finder.reset() # to reset the model and optimizer to their initial state
     
-def lr_finder_linear(lr=0.01,momentum=0.9, weight_decay=0.0001,end_lr=0.1, num_iter=100,trainloader = None,testloader = None):
+def lr_finder_linear(lr=0.01,momentum=0.9, weight_decay=0.0001,end_lr=0.1, num_iter=100,trainloader = None,testloader = None,criterion = None):
     use_cuda = torch.cuda.is_available()
     device = torch.device("cuda" if use_cuda else "cpu")
     model =  ResNet18(num_classes=200).to(device)

@@ -13,7 +13,7 @@ from models.resnet18 import ResNet18
 from utils.train_test_utils import train,test
 from utils.accuracy_utils import get_test_accuracy,get_accuracy_per_class
 from utils.plot_metrics_utils import plot_accuracy
-from utils.misclassified_image_utils import  display_misclassfied_cifar10_images
+from utils.misclassified_image_utils import  display_misclassfied_images
 import torchvision.datasets as datasets
 import torch.utils.data as data
 import matplotlib.pyplot as plt

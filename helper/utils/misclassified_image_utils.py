@@ -12,7 +12,7 @@ def imshow(img):
     plt.imshow(np.transpose(img, (1,2, 0)))    
 
 
-def display_misclassfied_ciphar10_images(testloader, model, device, classes, num_display=25):
+def display_misclassfied_images(testloader, model, device, classes, num_display=25):
     incorrect_image_list =[]
     predicted_label_list =[]
     correct_label_list = []

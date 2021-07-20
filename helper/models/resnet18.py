@@ -6,14 +6,6 @@ import torch.nn.functional as F
 class BasicBlock(nn.Module):
     expansion = 1
     
-    def perform_norm(type, num_channels, channel_size_w, channel_size_h, num_groups=2):
-        if type == 'BN':
-            return nn.BatchNorm2d(num_channels)
-        elif type == 'LN':
-            return nn.LayerNorm((num_channels, channel_size_w, channel_size_h))
-        elif type == 'GN':
-            return nn.GroupNorm(num_groups, num_channels)
-        
 
     def __init__(self, in_planes, planes, stride=1, p=0.0):
         super(BasicBlock, self).__init__()
@@ -69,11 +61,11 @@ class ResNet(nn.Module):
         out = self.layer2(out)
         out = self.layer3(out)
         out = self.layer4(out)
-        out = F.avg_pool2d(out, 4)
+        out = F.adaptive_avg_pool2d(out,1)
         out = out.view(out.size(0), -1)
         out = self.linear(out)
         return F.log_softmax(out)
 
 
-def ResNet18(p=0.0):
-    return ResNet(BasicBlock, [2,2,2,2], p)
+def ResNet18(num_classes=10, p=0.0):
+    return ResNet(BasicBlock, [2,2,2,2], p, num_classes)

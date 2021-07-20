@@ -98,7 +98,7 @@ def lr_finder_linear(lr=0.01,momentum=0.9, weight_decay=0.0001,end_lr=0.1, num_i
     lr_finder.plot(log_lr=False)
     lr_finder.reset()
     
-def train_model(lr=0.03, momentum=0.9, weight_decay=0.0001,EPOCHS = 50,,trainloader = trainloader,testloader = testloader ):
+def train_model(lr=0.03, momentum=0.9, weight_decay=0.0001,EPOCHS = 50,trainloader = trainloader,testloader = testloader ):
     from tqdm import tqdm
     from torch.optim.lr_scheduler import ReduceLROnPlateau
     import torch.optim as optim

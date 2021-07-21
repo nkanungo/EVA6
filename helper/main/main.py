@@ -134,16 +134,16 @@ def train_model(lr=0.03, momentum=0.9, weight_decay=0.0001,EPOCHS = 50,trainload
             torch.save(model.state_dict(), PATH)
         
         scheduler.step(t_acc)
-        
+    return model
 def display_test_data(testloader = None,classes=None):
     dataiter = iter(testloader)
     images, labels = dataiter.next()
     # print images
     imshow(torchvision.utils.make_grid(images))
     print('GroundTruth: ', ' '.join('%5s' % classes[labels[j]] for j in range(4)))
-    
+    return images,labels
 
-def predict(classes=None):
+def predict(classes=None, images = None,labels = None,model=None):
     with torch.no_grad():
         images, labels = images.to(device), labels.to(device)
         outputs = model(images) 

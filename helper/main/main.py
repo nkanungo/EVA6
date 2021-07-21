@@ -111,6 +111,8 @@ def train_model(lr=0.03, momentum=0.9, weight_decay=0.0001,EPOCHS = 50,trainload
     train_acc = []
     test_acc = []
     
+    use_cuda = torch.cuda.is_available()
+    device = torch.device("cuda" if use_cuda else "cpu")
     model =  ResNet18(num_classes=200).to(device)
     optimizer = optim.SGD(model.parameters(), lr=lr, momentum=momentum, weight_decay=weight_decay)
 

@@ -100,7 +100,7 @@ def lr_finder_linear(lr=0.01,momentum=0.9, weight_decay=0.0001,end_lr=0.1, num_i
     lr_finder.plot(log_lr=False)
     lr_finder.reset()
     
-def train_model(lr=0.03, momentum=0.9, weight_decay=0.0001,EPOCHS = 50,trainloader = None,testloader = None ):
+def train_model(lr=0.03, momentum=0.9, weight_decay=0.0001,EPOCHS = 50,trainloader = None,testloader = None, path=None ):
     from tqdm import tqdm
     from torch.optim.lr_scheduler import ReduceLROnPlateau
     import torch.optim as optim
@@ -120,7 +120,7 @@ def train_model(lr=0.03, momentum=0.9, weight_decay=0.0001,EPOCHS = 50,trainload
     scheduler = ReduceLROnPlateau(optimizer, mode='max', factor=0.1, patience=3, verbose=True)
 
 
-    PATH = '/content/drive/My Drive/tiny_imagenet_api.pth'
+    PATH = path
     torch.save(model.state_dict(), PATH)
     best_test_accuracy = 0.0
     for epoch in range(EPOCHS):

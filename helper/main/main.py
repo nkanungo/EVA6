@@ -153,10 +153,10 @@ def predict(classes=None, images = None,labels = None,model=None):
 
     print('Predicted: ', ' '.join('%5s' % classes[predicted[j]]
                                     for j in range(4)))
-def print_test_accuracy(testloader = None):
+def print_test_accuracy(testloader = None,model=None):
     print('Accuracy of the network on the 10000 test images: %.2f %%' % (get_test_accuracy(model, testloader, device)))
     
-def accuracy_per_class(testloader = None,classes=None):
+def accuracy_per_class(testloader = None,classes=None,model=None):
     class_correct,class_total = get_accuracy_per_class(model, testloader, device, num_classes=len(classes))
     for i in range(len(classes)):
         if class_total[i] > 0.0:

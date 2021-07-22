@@ -144,6 +144,8 @@ def display_test_data(testloader = None,classes=None):
     return images,labels
 
 def predict(classes=None, images = None,labels = None,model=None):
+    use_cuda = torch.cuda.is_available()
+    device = torch.device("cuda" if use_cuda else "cpu")
     with torch.no_grad():
         images, labels = images.to(device), labels.to(device)
         outputs = model(images) 

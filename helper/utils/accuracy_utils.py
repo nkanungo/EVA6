@@ -14,7 +14,7 @@ def get_test_accuracy(model, testloader, device):
     
     return 100.0* correct / total
 	
-def get_accuracy_per_class(model, testloader, device):
+def get_accuracy_per_class(model, testloader, device,  num_classes=10):
     
     class_correct = list(0. for i in range(10))
     class_total = list(0. for i in range(10))

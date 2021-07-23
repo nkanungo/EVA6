@@ -1,3 +1,10 @@
+Developers
+================
+• Monimoy Purkayastha (monimoyd@gmail.com)
+
+• Nihar Kanungo (nihar.kanungo@gmail.com)
+
+
 S10 Tiny Imagenet 
 ====================
 This program is to train a Resnet18 model with Tiny ImageNet Dataset for 50 Epochs to achive >50% accuracy.

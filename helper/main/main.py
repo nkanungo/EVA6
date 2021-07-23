@@ -26,14 +26,25 @@ import torch.optim as optim
 from torch_lr_finder import LRFinder
 
 
-
+'''
+This is the main python files which does all heavy lifting . The features include
+1. Download Tiny Imagenet Data 
+2. Splits (70:30) for Training and Testing 
+3. Define the Train Loader and Test Loader
+4. Define the Resnet18 Network 
+5. Define Training function , Predict Function
+6. Also connects to other modules for printing accuracy and plotting model parameters
+'''
 # Perform 70:30 split between training and validation
+
+# Function to display image 
 
 def imshow(img):
     img = img / 2 + 0.5     # unnormalize
     npimg = img.numpy()
     plt.imshow(np.transpose(npimg, (1, 2, 0)))
 
+# Load the Resnet18 Model and display the model summary
 def model_summary():
     #!pip install torchsummary
     from torchsummary import summary
@@ -42,9 +53,13 @@ def model_summary():
     device = torch.device("cuda" if use_cuda else "cpu")
     model =  ResNet18(num_classes=200).to(device)
     summary(model, input_size=(3, 64, 64))
+
+# Function to perform train validation split
     
 def train_valid_split(base_dir,valid_split):
     perform_train_validation_split(	base_dir= base_dir, validation_split = valid_split)
+
+# Depending of the input value it performs the load transfer 
     
 def load_transfer(base_dir,batch_size,transform_type):
 
@@ -68,6 +83,8 @@ def load_transfer(base_dir,batch_size,transform_type):
     print(' '.join('%5s' % classes[labels[j]] for j in range(4)))
     return trainloader, testloader, classes
 
+# This is the function which defines the model for this training 
+
 def define_network():
     #!pip install torchsummary
     from torchsummary import summary
@@ -75,7 +92,8 @@ def define_network():
     device = torch.device("cuda" if use_cuda else "cpu")
     model =  ResNet18(num_classes=200).to(device)
     summary(model, input_size=(3, 64, 64))
-    
+
+# Find Learning Rate    
 def lr_finder_exp(lr=0.001,momentum=0.9, weight_decay=0.0001,end_lr=10, num_iter=100,trainloader = None):
     
     use_cuda = torch.cuda.is_available()
@@ -90,6 +108,7 @@ def lr_finder_exp(lr=0.001,momentum=0.9, weight_decay=0.0001,end_lr=10, num_iter
     lr_finder.reset() # to reset the model and optimizer to their initial state
     return criterion
     
+# Find Linear Learning Rate
 def lr_finder_linear(lr=0.01,momentum=0.9, weight_decay=0.0001,end_lr=0.1, num_iter=100,trainloader = None,testloader = None,criterion = None):
     use_cuda = torch.cuda.is_available()
     device = torch.device("cuda" if use_cuda else "cpu")
@@ -99,6 +118,8 @@ def lr_finder_linear(lr=0.01,momentum=0.9, weight_decay=0.0001,end_lr=0.1, num_i
     lr_finder.range_test(trainloader, val_loader=testloader, end_lr=end_lr, num_iter=num_iter, step_mode="linear")
     lr_finder.plot(log_lr=False)
     lr_finder.reset()
+
+# This is the function which trains the model using the given hyper parameters
     
 def train_model(lr=0.03, momentum=0.9, weight_decay=0.0001,EPOCHS = 50,trainloader = None,testloader = None, path=None ):
     from tqdm import tqdm
@@ -135,6 +156,9 @@ def train_model(lr=0.03, momentum=0.9, weight_decay=0.0001,EPOCHS = 50,trainload
         
         scheduler.step(t_acc)
     return model,train_acc,test_acc
+    
+# Displays the Test data
+
 def display_test_data(testloader = None,classes=None):
     dataiter = iter(testloader)
     images, labels = dataiter.next()
@@ -143,6 +167,7 @@ def display_test_data(testloader = None,classes=None):
     print('GroundTruth: ', ' '.join('%5s' % classes[labels[j]] for j in range(4)))
     return images,labels
 
+# Function to predict 
 def predict(classes=None, images = None,labels = None,model=None):
     use_cuda = torch.cuda.is_available()
     device = torch.device("cuda" if use_cuda else "cpu")
@@ -153,11 +178,14 @@ def predict(classes=None, images = None,labels = None,model=None):
 
     print('Predicted: ', ' '.join('%5s' % classes[predicted[j]]
                                     for j in range(4)))
+                                    
+# Function which prints the test accuracy
 def print_test_accuracy(testloader = None,model=None):
     use_cuda = torch.cuda.is_available()
     device = torch.device("cuda" if use_cuda else "cpu")
     print('Accuracy of the network on the 10000 test images: %.2f %%' % (get_test_accuracy(model, testloader, device)))
     
+# Finds out accuracy for each class
 def accuracy_per_class(testloader = None,classes=None,model=None):
     use_cuda = torch.cuda.is_available()
     device = torch.device("cuda" if use_cuda else "cpu")
@@ -167,6 +195,7 @@ def accuracy_per_class(testloader = None,classes=None,model=None):
             print('Accuracy of %5s : %2d %%' % (
                 classes[i], 100 * class_correct[i] / class_total[i]))
                 
+# Function to plat the accuracy                
 def plot_accuracy(train_acc, test_acc):	
     fig, axs = plt.subplots(figsize=(5,5))
     axs.plot(train_acc, label="Train Accuracy")

@@ -37,6 +37,8 @@ d.	Boots
 •	Clone this repo: https://github.com/miki998/YoloV3_Annotation_Tool
 •	Follow the installation steps as mentioned in the repo.
 •	Annotate the images using the Annotation tool
+
+
 ![](images/labeling.PNG)
 
 3.	Check the annotation files and ensure all are correct. For each image you must see one txt file which contains annotation
@@ -95,7 +97,12 @@ Let’s call our friend “ffmpeg” to read the video file and convert into mul
 Now run all the images through the Detect.py file which contains the model
 Once all the images are inferred, ask the friend again to convert the images as video.
 Now download the video and enjoy 😊
+
+
 If you have any questions, please feel free to reach out to us. 
+ 
+ Output
+ =========
  https://youtu.be/6W_WGBakjJo
 
  

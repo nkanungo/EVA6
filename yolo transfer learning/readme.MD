@@ -36,7 +36,9 @@ d.	Boots
 2.	Download and Install the Image annotation tool by following the below steps 
 
 •	Clone this repo: https://github.com/miki998/YoloV3_Annotation_Tool
+
 •	Follow the installation steps as mentioned in the repo.
+
 •	Annotate the images using the Annotation tool
 
 

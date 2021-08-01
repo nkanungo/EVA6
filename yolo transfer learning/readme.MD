@@ -37,7 +37,7 @@ d.	Boots
 •	Clone this repo: https://github.com/miki998/YoloV3_Annotation_Tool
 •	Follow the installation steps as mentioned in the repo.
 •	Annotate the images using the Annotation tool
-![](images/labeling.png)
+![](images/labeling.PNG)
 
 3.	Check the annotation files and ensure all are correct. For each image you must see one txt file which contains annotation
 
@@ -87,7 +87,8 @@ After spending a lot of time and effort I am sure you would get the same feeling
 Once the model is trained, now is the time to inference it using some known images from training to ensure it’s working fine 
 
 Did you realize it’s working as expected? Now let’s perform the same on videos and see how well it performs 
-![](images/labeling.png)
+![](images/infer.jpg)
+![](images/output.jpg)
 
 # A friend in Need a Friend indeed
 Let’s call our friend “ffmpeg” to read the video file and convert into multiple images which we would use to infer using the trained model.

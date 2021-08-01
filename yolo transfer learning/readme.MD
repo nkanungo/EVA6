@@ -12,7 +12,7 @@ This Notebook Performs Object Detection using the YOLO V3 pretrained weights and
 
 
 
-**YoloCustomObjectDetection
+# YoloCustomObjectDetection
 **
 
 

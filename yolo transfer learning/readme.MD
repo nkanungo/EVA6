@@ -1,6 +1,5 @@
 
-
-• Developers
+# Developers
 
 1. Monimoy Purkayastha (monimoyd@gmail.com) 
 2. Nihar Kanungo (nihar.kanungo@gmail.com)

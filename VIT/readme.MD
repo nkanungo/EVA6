@@ -2,6 +2,7 @@ Developers
 =============
 
 Monimoy Purkayastha (monimoyd@gmail.com)
+
 Nihar Kanungo (nihar.kanungo@gmail.com)
 
 

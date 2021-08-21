@@ -34,4 +34,6 @@ All the above masks are combined by assigning each pixel to the map with highest
 The output value is quite impressive where the network provides segmentation for each thing and stuff.
 Some quite interesting outputs are shown below 
 
-![](images/output.png)
+![](images/output.jpeg)
+
+![](images/output1.jpeg)

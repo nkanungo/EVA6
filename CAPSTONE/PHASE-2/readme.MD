@@ -35,6 +35,9 @@ We decided to take the validation dataset which contains around 5000 images as t
 14.	Remove the overlaps programmatically like the above to ensure that things are not impacted while training 
 15.	That’s it. If you have done this successfully then this completes the ground truth preparation process of bounding box prediction 
 
+
+![](images/false_image.png')
+
 # Training Process
 Once the Ground truth is prepared the model needs to be trained along with this data to predict the bounding boxes for both things and stuffs. This information needs to be fed to our next model which would take the images with bounding boxes to predict the panoptic segmentation. However, that’s the task for phase-3 which we would do next 
 

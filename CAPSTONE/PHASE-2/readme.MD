@@ -36,6 +36,13 @@ We decided to take the validation dataset which contains around 5000 images as t
 15.	That’s it. If you have done this successfully then this completes the ground truth preparation process of bounding box prediction 
 
 
+![](images/IMG_0880.jpg)
+![](images/IMG_0881.jpg)
+![](images/IMG_0882.jpg)
+![](images/IMG_0883.jpg)
+![](images/IMG_0884.jpg)
+![](images/IMG_0885.jpg)
+
 ![](images/false_image.png)
 
 # Training Process

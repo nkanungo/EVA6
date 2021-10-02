@@ -1,6 +1,8 @@
 # Project Name: 
 Performing Panoptic Segmentation on Construction Materials and machineries 
-# Subproject: Predicting Bounding Boxes for the Construction Materials 
+# Subproject: 
+Predicting Bounding Boxes for the Construction Materials 
+
 # Summary:
 Computer Vision is the discipline under a broad area of Artificial Intelligence which teaches machines to see. There are many applications of computer vision using deep learning techniques. Image Classification, Text Extraction, Form Recognition and Object detection are Majority of Computer Vision applications. Many Algorithms has been developed in the past to cater these tasks. While Image classification is a relatively easier task to do, object detection needs a lot of experience and expertise to achieve the desired result. Many Deep Learning engineers take the help of pretrained models which are trained using ImageNet Data, Tiny ImageNet Data or Coco datasets for their regular jobs and has been quite popular. However, when it comes to perform Object detection on custom datasets the task becomes time consuming, tedious and difficult. At TheSchoolofAI during the last EVA sessions we had successfully Trained our custom images using many of the popular Algorithms like Yolo V2/V3/V4 and RCNN Family of Algorithms for Object Detection and SOA image classification models like Resnet, Inception, Xception etc. But TheSchoolofAI always thrives on change and excellence. Hence as part of the Capstone Project of EVA6 our mentor assigned us the task of performing Panoptic segmentation on Construction Materials. This Repository Contains the Part-2 of the Project which is to identify the Objects and draw bounding Box around that 
 # Taks 

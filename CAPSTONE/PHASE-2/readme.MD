@@ -4,18 +4,31 @@ Performing Panoptic Segmentation on Construction Materials and machineries
 # Summary:
 Computer Vision is the discipline under a broad area of Artificial Intelligence which teaches machines to see. There are many applications of computer vision using deep learning techniques. Image Classification, Text Extraction, Form Recognition and Object detection are Majority of Computer Vision applications. Many Algorithms has been developed in the past to cater these tasks. While Image classification is a relatively easier task to do, object detection needs a lot of experience and expertise to achieve the desired result. Many Deep Learning engineers take the help of pretrained models which are trained using ImageNet Data, Tiny ImageNet Data or Coco datasets for their regular jobs and has been quite popular. However, when it comes to perform Object detection on custom datasets the task becomes time consuming, tedious and difficult. At TheSchoolofAI during the last EVA sessions we had successfully Trained our custom images using many of the popular Algorithms like Yolo V2/V3/V4 and RCNN Family of Algorithms for Object Detection and SOA image classification models like Resnet, Inception, Xception etc. But TheSchoolofAI always thrives on change and excellence. Hence as part of the Capstone Project of EVA6 our mentor assigned us the task of performing Panoptic segmentation on Construction Materials. This Repository Contains the Part-2 of the Project which is to identify the Objects and draw bounding Box around that 
 # Taks 
+
 •	Collect at least 500 images for each category of construction materials (Initially we decided to use 100 types/classes of objects). The images should contain other objects in it 
+
 •	Annotate the objects using the tool provided/customized by the school of AI team. The annotations are not simple bounding boxes rather polygons which should cover all the parts of the material/machinery 
+
 •	The Images must be reviewed and finalized before getting into the final Dataset 
+
 •	Overall, we had 11000 images selected to be included as part of the training 
+
 •	Develop a code which would perform inferencing on the 11000 images using DETR Panoptic Segmentation Pretrained model on Coco Dataset (For more on DETR please refer to Part-1 of Capstone project)
+
 •	Collect the Output of the Inferencing from the model
+
 •	It’s expected that the Output will mislabel the construction materials and machineries as it has never been trained on that. Hence, we will Categorize those as miscellaneous Stuff class (If you don’t already know what is Thing and Stuff in DETR please refer to Part-1 of Capstone Project)
+
 •	The Coco thing class category ids are from 1-90. However, for us the thing is our labeled dataset. So, from the resultant dataset we would ignore coco classes from 1-90 
+
 •	However, we would keep the stuff classes as we never annotated the stuff classes, so we would take the coco stuff classes 
+
 •	As our images may not contain all the stuffs, so we would also add the COCO Validation Dataset images and annotations for our training. The Training dataset is huge; hence we would manage with validation one 
+
 •	Now Prepare the Ground Truth for Training the model for predicting bounding boxes around custom objects 
+
 •	Once the Model is trained with predicting bounding boxes, we would then train the segmentation head
+
 # Ground Truth Preparation
 1. Rename Files: The Images of different thing classes may contain same file name. Hence the First task was to rename the image file by adding prefix of the class name 
 2. Predict Stuff Present in the Image:  The stuff annotations are collected from the prediction of the DETR Panoptic segmentation Pretrained model. Each image is predicted with DETR panoptic segmentation code having resnet101 backbone which was pretrained with Coco dataset. The bounding boxes predicted by DETR panoptic segmentation for those with bounding confidence more than 0.85.

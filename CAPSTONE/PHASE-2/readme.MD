@@ -24,8 +24,11 @@ Computer Vision is the discipline under a broad area of Artificial Intelligence 
 The Value in Predicted Bounding boxes are in the range of 0-1 (Scaled). However, we need to descale it based on the image size. Hence, we performed the following logic to bring the original pixels of the bounding boxes.
   
   •	The bounding box predicted by DETR:  Xcenter, Ycenter, width and height 
+  
   •	Coco dataset bounding box  Xleft, Yleft, width, height which are actual pixel position. 
+  
   •	Xleft = Image Width * ( Predicted Xcenter - 0.5 * Predicted width) Yleft = Image Height * ( Xcenter - 0.5 * Predicted height)
+  
 
 # Consolidate All Images and Annotations:
 The Idea here is to create 2 Datasets (one for training and another for validation with 90:10 ration). Hence the program for consolidation is designed to pick every tenth record and add that to validation set while the other 9 goes to training set

@@ -34,9 +34,13 @@ The Value in Predicted Bounding boxes are in the range of 0-1 (Scaled). However,
 The Idea here is to create 2 Datasets (one for training and another for validation with 90:10 ration). Hence the program for consolidation is designed to pick every tenth record and add that to validation set while the other 9 goes to training set
 Read each Annotation file Individually and consolidate. 
 # Rename the Classes : 
+
 0 – Misc Stuff
+
 1-48 : Annotated thing classes
+
 49-157 : Coco Stuff classes 
+
 
 # Add the COCO Stuff image and Annotations 
 Download the COCO validation stuff images and annotations 
@@ -57,7 +61,7 @@ Finally, we have two image folders and two annotations (One of Train and another
 
 # Process Flow 
 
-![](images/bloack_diagram.png)
+![](images/bloack_diagram.PNG)
 
 
 # Training Process
@@ -88,9 +92,11 @@ Number of queries: 80 Learning Rate: 1e-5 Number of classes: 158
 In case you are finding these issues 
 # Model Training is giving CUDA Error: 
 I found this error multiple times. The reasons behind that were 
+
 1.	Hardcoding of the number of classes as 2 in detr.py
 2.	The bounding boxes size exceeded the image size
 3.	The Bounding boxes contain negative values 
+
 Solution: 
 Modify the number of classes to 158
 Reextracted the bounding boxes by checking the x+width and y+height with image width and height. Then I dropped the bad values 

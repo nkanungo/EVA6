@@ -61,7 +61,7 @@ Finally, we have two image folders and two annotations (One of Train and another
 
 # Process Flow 
 
-![](images/bloack_diagram.PNG)
+![](images/block_diagram.PNG)
 
 
 # Training Process

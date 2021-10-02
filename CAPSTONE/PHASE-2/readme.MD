@@ -76,13 +76,21 @@ The Structure of the folder During Training
     └ val2017/ # validation images
     
 The DETR code repository 
+
 https://github.com/woctezuma/detr.git 
+
 pretrained weights are loaded from 
+
 https://dl.fbaipublicfiles.com/detr/detr-r50-e632da11.pth'
+
 Output Directory : 
+
 /content/drive/MyDrive/datanew/outputdir
+
 Checkpoint : 
+
 Customcheckpoint
+
 
 # Hyperparameters:
 Number of queries: 80 Learning Rate: 1e-5 Number of classes: 158

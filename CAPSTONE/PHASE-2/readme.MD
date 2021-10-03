@@ -173,6 +173,8 @@ Solution : Saved and Restarted from check point
 # Summary
 1. With 50+ Epochs the Outcome was pretty impressive . However few things can be improved by running for 200+ epochs.
 2. We can either lower down the weight of misc_stuff or the number of images to ensure that the model is not biased towards misc_stuff
+3. Cyclic LR or One Cyclic LR may improve the error rate 
+4. Adaptive LR can also be tried out 
 
 
 

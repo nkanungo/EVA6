@@ -170,6 +170,9 @@ Solution: Removed few low confidences stuff classes and class with more objects
 # Colab Restarted Multiple Times: The colab restarted after 36-37 epochs 
 Solution : Saved and Restarted from check point  
  
-# Output of the Training 
+# Summary
+1. With 50+ Epochs the Outcome was pretty impressive . However few things can be improved by running for 200+ epochs.
+2. We can either lower down the weight of misc_stuff or the number of images to ensure that the model is not biased towards misc_stuff
+
 
 

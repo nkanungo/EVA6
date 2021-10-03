@@ -108,7 +108,36 @@ Customcheckpoint
 
 
 # Hyperparameters:
-Number of queries: 80 Learning Rate: 1e-5 Number of classes: 158
+Number of queries: 80 
+
+Learning Rate: 1e-5 
+
+Number of classes: 158
+
+
+# Output 
+
+Initially I ran the Training for 100 epochs , However Colab Restrated after 37 epochs and by mistake i reran it before strating from the checkpoint . However I restart again after 20 epochs and ran it for 50 epochs. The results shown are of 50 epochs .
+
+
+1. Model Performance Output 
+
+![](images/1.png)
+![](images/2.png)
+![](images/3.png)
+![](images/I1.png)
+![](images/I2.png)
+![](images/I3.png)
+![](images/I4.png)
+![](images/I5.png)
+![](images/I6.png)
+![](images/I7.png)
+![](images/I8.png)
+![](images/I9.png)
+![](images/I10.png)
+![](images/I11.png)
+![](images/I12.png)
+
 
 # Issues During Training 
 
